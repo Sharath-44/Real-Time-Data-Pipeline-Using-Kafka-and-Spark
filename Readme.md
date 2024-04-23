@@ -39,17 +39,22 @@ Real-time data processing is crucial in today's data-driven world, where organiz
 1. Start Zookeeper: `bin/zookeeper-server-start.sh config/zookeeper.properties`
 2. Start Kafka: `bin/kafka-server-start.sh config/server.properties`
 3. Create Kafka topics:
-
+a. RawSensorData topic:
 `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic RawSensorData`
+b. ValidatedSensorData topic:
 `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic ValidatedSensorData`
+c. CleanSensorData topic:
 `bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic CleanSensorData`
 
-4. Run `python sensor.py` to start generating sensor data.
-5. Run `python push_data_to_kafka.py`
-6. Structure and Validate Data, Push To MongoDB and Kafka Topic CleanSensorData: `./bin/spark-submit structure_validate_store.py`
-7. Real-Time Dashboard - Visualization: `bokeh serve --show dashboard.py`
+5. Run `python sensor.py` to start generating sensor data.
+6. Run `python push_data_to_kafka.py`
+7. Structure and Validate Data, Push To MongoDB and Kafka Topic CleanSensorData: `./bin/spark-submit structure_validate_store.py`
+8. Real-Time Dashboard - Visualization: `bokeh serve --show dashboard.py`
 
 ## Contributors
 
 - [Sharath M S](https://github.com/Sharath-44)
+- Aditya Vishwanatha
+- Sahana Parasuram
+- [Saransh Mehta](https://github.com/mehtasaransh11)
 
