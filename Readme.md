@@ -18,7 +18,7 @@ Real-time data processing is crucial in today's data-driven world, where organiz
 
 ## Data pipeline architecture
 
-![alt text](<WhatsApp Image 2024-04-21 at 15.02.02_19daff5c.jpg>)
+![Data pipeline architecture](<WhatsApp Image 2024-04-21 at 15.02.02_19daff5c.jpg>)
 
 ## Requirements
 
@@ -39,12 +39,18 @@ Real-time data processing is crucial in today's data-driven world, where organiz
 1. Start Zookeeper: `bin/zookeeper-server-start.sh config/zookeeper.properties`
 2. Start Kafka: `bin/kafka-server-start.sh config/server.properties`
 3. Create Kafka topics:
-a. RawSensorData topic:
-`bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic RawSensorData`
-b. ValidatedSensorData topic:
-`bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic ValidatedSensorData`
-c. CleanSensorData topic:
-`bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic CleanSensorData`
+    - RawSensorData topic:
+        ```
+        bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic RawSensorData
+        ```
+    - ValidatedSensorData topic:
+        ```
+        bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic ValidatedSensorData
+        ```
+    - CleanSensorData topic:
+        ```
+        bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic CleanSensorData
+        ```
 
 5. Run `python sensor.py` to start generating sensor data.
 6. Run `python push_data_to_kafka.py`
@@ -57,4 +63,3 @@ c. CleanSensorData topic:
 - Aditya Vishwanatha
 - Sahana Parasuram
 - [Saransh Mehta](https://github.com/mehtasaransh11)
-
