@@ -30,11 +30,10 @@ Real-time data processing is crucial in today's data-driven world, where organiz
 ## Installation
 
 1. Clone the repository to your local machine.
-2. Install Python dependencies: `pip install -r requirements.txt`
-3. Install and configure Apache Kafka and Apache Spark.
-4. Install MongoDB and ensure it's running.
+2. Install and configure Apache Kafka and Apache Spark.
+3. Install MongoDB and ensure it's running.
 
-## Usage
+## How to run
 
 1. Start Zookeeper: `bin/zookeeper-server-start.sh config/zookeeper.properties`
 2. Start Kafka: `bin/kafka-server-start.sh config/server.properties`
