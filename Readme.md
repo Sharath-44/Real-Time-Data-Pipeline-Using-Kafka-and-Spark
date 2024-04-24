@@ -59,6 +59,6 @@ Real-time data processing is crucial in today's data-driven world, where organiz
 ## Contributors
 
 - [Sharath M S](https://github.com/Sharath-44)
-- Aditya Vishwanatha
+- [Aditya Vishwanatha](https://github.com/adityavishy)
 - [Sahana Parasuram](https://github.com/sahanaparasuram)
 - [Saransh Mehta](https://github.com/mehtasaransh11)
